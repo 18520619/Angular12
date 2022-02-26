@@ -1,5 +1,53 @@
 
 <div class="box">
   <h2>Đây là home</h2>
-  <h4>Hello ban mình là {{name}} </h4>
+   <!-- <h4>Hello ban mình là {{name}} </h4> <br> -->
+  <!-- <input type="text" [(ngModel)]="name"><br> -->
+  <!--<input type="text" [value]="name" [title]="'Đây là ' + name"> -->
+    <!-- <button (click)="resetName()">aaaaaaaaaaaaaa</button>
+  <h2 *ngIf="age < 18" >Bạn còn trẻ lắm</h2>
+  <h2 *ngIf="age>18">Bạn đã lớn rồi</h2> -->
+
+  <!-- <h4>Hello ban mình {{age}} tuổi </h4> <br>
+  <input type="text" [(ngModel)]="age">
+  <div *ngIf="age<18; then ageYoung; else ageOld"></div>
+  <ng-template #ageYoung> <h2>Bạn còn trẻ lắm</h2> </ng-template>
+  <ng-template #ageOld> <h2>Bạn đã lớn rồi</h2> </ng-template> -->
+
+  <h1>Fruit</h1>
+  <table class="table">
+    <tr>
+      <th>Number</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Down Price</th>
+    </tr>
+    <tr *ngFor="let trai of fruitAll; let i =index">
+      <td> {{ i+1 }} </td>
+      <td>{{trai.name |uppercase}}</td>
+      <!-- <td class="soAm">{{trai.price}}$</td> -->
+      <td class="right">
+        <span [ngClass]="{soAm: trai.price<0}"> {{trai.price}} $ </span>
+      </td>
+      
+      <td>
+        <span *ngIf="trai.downPrice ">Đang hạ giá!</span>
+      </td>
+    </tr>
+  </table> <br>
+   
+  <!-- <ul style="list-style: none;" *ngFor="let trai of fruit; let i = index">
+   <li> {{i+1}}. {{trai}}</li>
+  </ul> -->
+  <span>Tỉnh\Thành phố: </span>
+  <select  id="city" (change)="changeCity($event)">
+    <option *ngFor="let city of cities" value="{{city.city}}"> {{city.city}} </option>
+  </select> <br>
+
+  <span>Quận\Huyện: </span>
+  <select  id="district">
+    <option *ngFor="let district of districts" value="district">{{district}}</option>
+   
+  </select>
+
 </div>

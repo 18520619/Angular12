@@ -2,5 +2,26 @@
   border: 1px solid;
   padding: 10px;
   box-shadow: 5px 10px 18px red;
-  width: 30%;
+  width: 50%;
+}
+table,
+td,
+th {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 15px;
+}
+.soAm {
+  color: red;
+}
+.right {
+  text-align: right;
 }

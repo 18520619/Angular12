@@ -2,7 +2,16 @@
 <h3>Chào mừng các bạn đến với Angular 12</h3>
 <h3>Chúc các bạn thành công</h3>
 
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/home" routerLinkActive="active">Home Component</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
 
 
-
-<app-home></app-home>
+<!-- <app-home></app-home> -->
